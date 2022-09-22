@@ -1,0 +1,958 @@
+fileFormatVersion: 2
+guid: d5c5c454848336b45a234eb8f97a3b81
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 401
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254488483976bd54dad69830a31289f6
+      internalID: 1094079378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 401
+        width: 53
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c6f604a9522e24c89d6a7d8f0c2d66
+      internalID: 981072590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_2
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 401
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59df7d0726ced5f46b0fbb31edd97445
+      internalID: 1209204531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 401
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9bd6f1613322114585858f102fa8d30
+      internalID: -902685933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_4
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 401
+        width: 66
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9858260caa466c4980eb4ba2ce8aea7
+      internalID: -259060895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_5
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 401
+        width: 55
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aecdda1c0317bb4eb4727c7bf6fa748
+      internalID: -1601140491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_6
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 401
+        width: 74
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b826ffd4778183240bafb622e03c33aa
+      internalID: 1811120646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_7
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 401
+        width: 74
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05cde142a7704a4d818e4aab84d9684
+      internalID: 1356541547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 301
+        width: 52
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9207c2c3fb936d543b22e756ea236a1c
+      internalID: -1479914637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_9
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 301
+        width: 52
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd6aad07563bc6419aae1b7c39b060d
+      internalID: 834424321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_10
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 301
+        width: 52
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1995496ce4601f642aad1f5913247ff3
+      internalID: -470568480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_11
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 301
+        width: 52
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2c0877c38e73d4798036e367345806
+      internalID: -2076380352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_12
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 301
+        width: 52
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee31b3ba61eb8844eb054fa9c4e42751
+      internalID: -1830645014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_13
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 301
+        width: 52
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaab7bf69e1fd64b96a3addce437651
+      internalID: 1062093911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_14
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 301
+        width: 52
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7df0da5604ac1c48a341a90b13b482f
+      internalID: 1423277945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_15
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 301
+        width: 52
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e23c5c2f66d5484f856dd07a983ad7f
+      internalID: -368202685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 201
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffa727664297ae4384704239b61afb9
+      internalID: 1742735416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_17
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 201
+        width: 74
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540ec335d29ada045a132b3597259108
+      internalID: 645489212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_18
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 201
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7a8b2bedd7f7849b0ca40bc4c13384
+      internalID: -2111205681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_19
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 201
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c97df61a5e6b54daabcd16012ff73f
+      internalID: -1241230514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_20
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 201
+        width: 76
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6dcd266b92d05b479875d31262b0de9
+      internalID: 185653700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_21
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 201
+        width: 74
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161faf0416cbbe74cabd9ba56f485c0d
+      internalID: 1548706950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_22
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 201
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5d375aae3a31243b555ebfab26d9ee
+      internalID: -1993627620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_23
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 201
+        width: 74
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f161b279ea1234c9323a7b8920a46a
+      internalID: 104446026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 101
+        width: 95
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60306d4e76d382b4daac8ca58d16c66d
+      internalID: 177565952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_25
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 124
+        width: 14
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb88a7b21a45664d831ca3d6196ad3f
+      internalID: -1308548605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_26
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 124
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc60e03e959c94544b48d5d3ddc4dc1e
+      internalID: -1129106519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_27
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 117
+        width: 44
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2134b8b75c3b34fa1b5b0f5657d739
+      internalID: -1049494098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_28
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 129
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdbf72bd24c09d43ae1e8da047ce37d
+      internalID: 2032448018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_29
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 130
+        width: 5
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f54c5db7f1f56d428a80893ab1193b9
+      internalID: -1151353780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_30
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 5
+        width: 53
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf567ee109145eb4f9ee5c4edb70c957
+      internalID: 1295941290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_31
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 5
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24323f99f5b8274438246678de57195d
+      internalID: 1895449783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_32
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 3
+        width: 53
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d6872d5ec6340429b6055d75c69219
+      internalID: -1711588410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_33
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5a6ad81a1fbff4491b2b6454daa818
+      internalID: 554683669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_34
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1
+        width: 53
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2bc95e7961b26847a186700d9e21e53
+      internalID: -1322869112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_35
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1
+        width: 53
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64935224a860b746968be6e40ec745b
+      internalID: -1544477311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_36
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 2
+        width: 53
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46deb0673afcb047853c12ba11bb7d1
+      internalID: 1396576228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cavaleiro GMG sheet_37
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33d2787e8f9d72418ed5621a2fca558
+      internalID: 1703655669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cavaleiro GMG sheet_4: -259060895
+      Cavaleiro GMG sheet_20: 185653700
+      Cavaleiro GMG sheet_27: -1049494098
+      Cavaleiro GMG sheet_23: 104446026
+      Cavaleiro GMG sheet_7: 1356541547
+      Cavaleiro GMG sheet_11: -2076380352
+      Cavaleiro GMG sheet_18: -2111205681
+      Cavaleiro GMG sheet_28: 2032448018
+      Cavaleiro GMG sheet_35: -1544477311
+      Cavaleiro GMG sheet_31: 1895449783
+      Cavaleiro GMG sheet_0: 1094079378
+      Cavaleiro GMG sheet_5: -1601140491
+      Cavaleiro GMG sheet_6: 1811120646
+      Cavaleiro GMG sheet_9: 834424321
+      Cavaleiro GMG sheet_26: -1129106519
+      Cavaleiro GMG sheet_25: -1308548605
+      Cavaleiro GMG sheet_1: 981072590
+      Cavaleiro GMG sheet_13: 1062093911
+      Cavaleiro GMG sheet_36: 1396576228
+      Cavaleiro GMG sheet_22: -1993627620
+      Cavaleiro GMG sheet_24: 177565952
+      Cavaleiro GMG sheet_15: -368202685
+      Cavaleiro GMG sheet_33: 554683669
+      Cavaleiro GMG sheet_3: -902685933
+      Cavaleiro GMG sheet_12: -1830645014
+      Cavaleiro GMG sheet_14: 1423277945
+      Cavaleiro GMG sheet_30: 1295941290
+      Cavaleiro GMG sheet_16: 1742735416
+      Cavaleiro GMG sheet_8: -1479914637
+      Cavaleiro GMG sheet_21: 1548706950
+      Cavaleiro GMG sheet_32: -1711588410
+      Cavaleiro GMG sheet_29: -1151353780
+      Cavaleiro GMG sheet_37: 1703655669
+      Cavaleiro GMG sheet_19: -1241230514
+      Cavaleiro GMG sheet_10: -470568480
+      Cavaleiro GMG sheet_2: 1209204531
+      Cavaleiro GMG sheet_34: -1322869112
+      Cavaleiro GMG sheet_17: 645489212
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
