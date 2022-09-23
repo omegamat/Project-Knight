@@ -28,10 +28,9 @@ public class PauseUI : MonoBehaviour
         Application.Quit();
         Debug.Log("GAME QUIT!");
     }
-    public void Restart()
+     public void OnLoadSceneIndex(int _sceneIndex)
     {
-        SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene(_sceneIndex);
     }
     public void PauseSwitch()
     {
