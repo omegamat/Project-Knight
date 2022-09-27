@@ -6,9 +6,9 @@ using UnityEngine.Events;
 public class CharacterMovement : MonoBehaviour
 {
     public CharacterController2D controller;
-    public Animator animator;
+    public Animator m_PlayerAnimator;
      [SerializeField] private MeleeBehaviour m_melee;
-    public Animator m_Sword;
+    public Animator m_SwordAnimator;
     public float runSpeed = 40f;
     private float horizontalMove = 0f;
     bool jump = false;
@@ -18,22 +18,22 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController2D>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        m_PlayerAnimator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         if(Input.GetButtonDown("Jump"))
         {
             jump = true;
-            animator.SetBool("isJumping", jump);
+            m_PlayerAnimator.SetBool("isJumping", jump);
         }
         if (Input.GetButtonDown("Fire1"))
         {
-            Attack();
+            OnAttack();
         }
     }
 
@@ -43,14 +43,17 @@ public class CharacterMovement : MonoBehaviour
         jump = false;
     }
 
-    void Attack()
+    void OnAttack()
     {
-        OnAttackEvent.Invoke();
+        //OnAttackEvent.Invoke();
+        m_SwordAnimator.SetTrigger("AttackTrigger");
+        m_PlayerAnimator.SetTrigger("isAttacking");
+        
     }
 
     public void OnLanding()
     {
-        animator.SetBool("isJumping", false);
+        m_PlayerAnimator.SetBool("isJumping", false);
     }
 }
 
