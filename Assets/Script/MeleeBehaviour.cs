@@ -14,7 +14,7 @@ public class MeleeBehaviour: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_animetor = GetComponent<Animator>();
+        //m_animetor = GetComponent<Animator>();
     }
 
     //Do damager to tag collider
@@ -34,6 +34,6 @@ public class MeleeBehaviour: MonoBehaviour
     //used to star animation using unity events
     public void StartAttack()
     {
-         m_animetor.SetTrigger("AttackTrigger");
+        //m_animetor.SetTrigger("AttackTrigger");
     }
 }

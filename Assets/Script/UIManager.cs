@@ -8,7 +8,9 @@ using DG.Tweening;
 public class UIManager : MonoBehaviour
 {
     public static bool gameIsPaused = false;
-    public GameObject pauseInterface; //pause canvas
+    public GameObject pauseUI; //pause canvas
+
+    public GameObject deathUI;
 
   
     public Image HP_bar;
@@ -16,18 +18,19 @@ public class UIManager : MonoBehaviour
     float maxHP = 0;
     float currentHP;
 
+    public bool isGameOver = false;
+
     
     void Start() 
     {
-        //DOTween.defaultTimeScaleIndependent = true;
-        //Pause();
+        deathUI.SetActive(false);
         maxHP = player.maxHP;
     }
 
     
     void Update() // Update is called once per frame
     {
-        
+        isGameOver = player.GetIsAlive;
         currentHP = player.HP; //set healh bar
         HP_bar.fillAmount = currentHP/maxHP; //set healh life bar according with current life
 
@@ -36,6 +39,10 @@ public class UIManager : MonoBehaviour
         {
             //gameIsPaused = !gameIsPaused;
             PauseSwitch();       
+        }
+        if(isGameOver)
+        {
+            deathUI.SetActive(true);
         }
     }
 
@@ -46,13 +53,22 @@ public class UIManager : MonoBehaviour
         Debug.Log("GAME QUIT!");
     }
 
-    //Load scene by index(number)
-    //0 = main menu
-    //1 = devroom
-    //2 ... = game leves
+    //Load scene by index(number).
+    //0 = main menu.
+    //1 = devroom.
+    //2 ... = game leves.
      public void LoadSceneIndex(int _sceneIndex)
     {
+        Scene _scene = SceneManager.GetSceneByBuildIndex(_sceneIndex);
         SceneManager.LoadScene(_sceneIndex);
+        Debug.Log("Loading..." + _scene.name);
+    }
+    //load Current Scene.
+    public void RestartScene()
+    {
+        Scene _scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(_scene.name);
+        Debug.Log("Loading..." + _scene.name);
     }
     
     //input to pause
@@ -68,7 +84,7 @@ public class UIManager : MonoBehaviour
     {
         if (gameIsPaused)
         {
-            pauseInterface.transform.DOMoveX(190f,0.25f,false);
+            pauseUI.transform.DOMoveX(190f,0.25f,false);
             yield return new WaitForSeconds(0.25f);
             Time.timeScale = 0;            
             //pauseInterface.SetActive(true);
@@ -78,7 +94,7 @@ public class UIManager : MonoBehaviour
         else
         {
             Time.timeScale = 1;
-            pauseInterface.transform.DOMoveX(-200f,0.25f,false);
+            pauseUI.transform.DOMoveX(-200f,0.25f,false);
             yield return null;
             //pauseInterface.SetActive(false);
         }

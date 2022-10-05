@@ -512,6 +512,7 @@ MonoBehaviour:
   m_melee: {fileID: 7926984436562938573}
   m_SwordAnimator: {fileID: 7926984436562938571}
   runSpeed: 40
+  canAttack: 1
   OnAttackEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1088,6 +1089,26 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6483266638955934098, guid: 300a7ba684909e944aa93deccd871074, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 300a7ba684909e944aa93deccd871074, type: 3}
+--- !u!1 &535632311874688348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7596654372691276598, guid: 300a7ba684909e944aa93deccd871074, type: 3}
+  m_PrefabInstance: {fileID: 7926984437649991274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3718396796632565524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535632311874688348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c50690d76da5794ea17a6c9e7de31f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targertTag: NPCEnemy
+  m_Damage: 1
+  hitEffect: {fileID: 7981955637714951838, guid: 020bbe01974024742aa52359443e7704, type: 3}
 --- !u!4 &2365701501393006123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5680981570296350785, guid: 300a7ba684909e944aa93deccd871074, type: 3}

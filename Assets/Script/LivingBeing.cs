@@ -11,7 +11,7 @@ public class LivingBeing: MonoBehaviour
 
     public bool isInmortal = false;
 
-    bool isAlive() // se estiver com 0 de HP considera morto
+    private bool IsAlive() // se estiver com 0 de HP considera morto
     {
         if(HP < 0 && !isInmortal)
         {
@@ -22,6 +22,14 @@ public class LivingBeing: MonoBehaviour
            return false;
         }
             
+    }
+    public bool GetIsAlive
+    {
+        get
+        {
+            return IsAlive();
+        }
+        
     }
     void Start()
     {
@@ -35,18 +43,19 @@ public class LivingBeing: MonoBehaviour
     public void TakeDamage(int _damege)
     {
         HP = HP - _damege;
-        if(!isAlive())
+        if(!IsAlive())
         {
-            OnDeath();
+            StartCoroutine(PlayerDeath());
         }
-        m_animator.SetTrigger("Damage");
+        //m_animator.SetTrigger("Damage");
     }
-    public void OnDeath()
+    IEnumerator PlayerDeath()
     {
-        //corroutine para morte
-        //animação de morte
-        //...
-        //destroy game object
+
+        //death animation
+        yield return new WaitForSeconds(2.5f);
+        //Death UI
+        yield return null;
 
     }
 }
