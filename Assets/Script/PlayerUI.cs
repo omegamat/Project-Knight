@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//legacy script
 public class PlayerUI : MonoBehaviour
 {
     public Image HP_bar;

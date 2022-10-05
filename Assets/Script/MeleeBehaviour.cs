@@ -10,7 +10,7 @@ public class MeleeBehaviour: MonoBehaviour
     public int m_Damage = 1;
 
     public GameObject hitEffect;
-    private bool canAttack = true;
+
     // Start is called before the first frame update
     void Start()
     {

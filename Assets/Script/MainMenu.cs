@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//legacy
 public class MainMenu : MonoBehaviour
 {
     public void OnQuit()

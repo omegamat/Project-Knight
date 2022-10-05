@@ -11,7 +11,9 @@ public class CharacterMovement : MonoBehaviour
     public Animator m_SwordAnimator;
     public float runSpeed = 40f;
     private float horizontalMove = 0f;
-    bool jump = false;
+    private bool jump = false;
+
+    public bool canAttack = true;
 
     public UnityEvent OnAttackEvent;
 
@@ -31,7 +33,7 @@ public class CharacterMovement : MonoBehaviour
             jump = true;
             m_PlayerAnimator.SetBool("isJumping", jump);
         }
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canAttack)
         {
             OnAttack();
         }
