@@ -6,6 +6,8 @@ public class MeleeBehaviour: MonoBehaviour
 {
     Animator m_animetor;
 
+    public CharacterMovement m_character;
+
     public string targertTag = "NPCEnemy";
     public int m_Damage = 1;
 
@@ -14,7 +16,7 @@ public class MeleeBehaviour: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //m_animetor = GetComponent<Animator>();
+        m_animetor = GetComponent<Animator>();
     }
 
     //Do damager to tag collider
@@ -34,6 +36,11 @@ public class MeleeBehaviour: MonoBehaviour
     //used to star animation using unity events
     public void StartAttack()
     {
-        //m_animetor.SetTrigger("AttackTrigger");
+        m_character.OnEnterAttack();
+    }
+    public void EndAttack()
+    {
+        m_character.OnExitAttack();
+        m_animetor.SetBool("isAttacking", false);
     }
 }

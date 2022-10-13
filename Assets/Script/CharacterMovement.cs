@@ -15,6 +15,8 @@ public class CharacterMovement : MonoBehaviour
 
     public bool canAttack = true;
 
+    public bool canMove = true;
+
     public UnityEvent OnAttackEvent;
 
     void Start()
@@ -25,16 +27,25 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        if(canMove)
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        }
+        if(!canMove)
+        {
+            horizontalMove = 0;
+        }
 
         m_PlayerAnimator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
         if(Input.GetButtonDown("Jump"))
         {
             jump = true;
             m_PlayerAnimator.SetBool("isJumping", true);
         }
-        if (Input.GetButtonDown("Fire1") && canAttack)
+        if (Input.GetButtonDown("Fire1"))
         {
+            //canAttack = false;
             OnAttack();
         }
     }
@@ -47,10 +58,28 @@ public class CharacterMovement : MonoBehaviour
 
     void OnAttack()
     {
+        
         //OnAttackEvent.Invoke();
-        m_SwordAnimator.SetTrigger("AttackTrigger");
+        m_SwordAnimator.SetBool("isAttacking", true);
         m_PlayerAnimator.SetTrigger("isAttacking");
         
+    }
+    public void OnExitAttack()
+    {
+        canMove = true;
+        canAttack = true;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+    }
+    public void OnEnterAttack()
+    {
+        canMove = false;
+        canAttack = false;
+    }
+    
+
+    void OnDamage()
+    {
+
     }
 
     public void OnLanding()
