@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7bac3381b3a454f4a82297b4f6760d79
+guid: 1c889fd01d5bce043965237abb0f0746
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Effect_SpriteSheet1_0
+      name: UI_SpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 80
-        height: 96
+        y: 16
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b84c9caedffcbb5458676c7528acc321
-      internalID: -1252512255
+      spriteID: d75d92be62c207b4da533b98694dbb46
+      internalID: -783034160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Effect_SpriteSheet1_1
+      name: UI_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 96
-        width: 80
-        height: 96
+        x: 48
+        y: 48
+        width: 128
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d41d7a8fe7084174a921673de3e178eb
-      internalID: 422404803
+      spriteID: b5f346faa0a876a4b9b6e0ab7341f10e
+      internalID: -858189643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Effect_SpriteSheet1_2
+      name: UI_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 160
-        y: 96
-        width: 80
-        height: 96
+        x: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,71 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09df6fe504228d4449c58451cc24d3ad
-      internalID: 920020408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Effect_SpriteSheet1_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4170d162e93825645a58c03c98004609
-      internalID: -141044222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Effect_SpriteSheet1_4
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 80
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5192c61eab3726f4ea99077c7d7b89ac
-      internalID: 1221001562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Effect_SpriteSheet1_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 80
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efe0290080ad6874b802ac2d63aac8cb
-      internalID: -1937156273
+      spriteID: 057892c2b5996f24e9474bff57417a44
+      internalID: 816832104
       vertices: []
       indices: 
       edges: []
@@ -241,12 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Effect_SpriteSheet1_2: 920020408
-      Effect_SpriteSheet1_3: -141044222
-      Effect_SpriteSheet1_4: 1221001562
-      Effect_SpriteSheet1_0: -1252512255
-      Effect_SpriteSheet1_5: -1937156273
-      Effect_SpriteSheet1_1: 422404803
+      UI_SpriteSheet_1: -858189643
+      UI_SpriteSheet_0: -783034160
+      UI_SpriteSheet_2: 816832104
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -31,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump"))
         {
             jump = true;
-            m_PlayerAnimator.SetBool("isJumping", jump);
+            m_PlayerAnimator.SetBool("isJumping", true);
         }
         if (Input.GetButtonDown("Fire1") && canAttack)
         {
@@ -56,6 +56,10 @@ public class CharacterMovement : MonoBehaviour
     public void OnLanding()
     {
         m_PlayerAnimator.SetBool("isJumping", false);
+    }
+    public void OnJumping()
+    {
+        m_PlayerAnimator.SetBool("isJumping", true);
     }
 }
 

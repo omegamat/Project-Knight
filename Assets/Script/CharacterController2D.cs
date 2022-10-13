@@ -23,6 +23,7 @@ public class CharacterController2D : MonoBehaviour
 	[Space]
 
 	public UnityEvent OnLandEvent;
+	public UnityEvent OnAirEvent;
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
@@ -39,6 +40,9 @@ public class CharacterController2D : MonoBehaviour
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
+
+		if (OnAirEvent == null)
+			OnAirEvent = new UnityEvent();	
 	}
 
 	private void FixedUpdate()
@@ -56,8 +60,14 @@ public class CharacterController2D : MonoBehaviour
 				m_Grounded = true;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
+				
 			}
+
 		}
+		if (!m_Grounded)
+				OnAirEvent.Invoke();
+
+
 	}
 
 
