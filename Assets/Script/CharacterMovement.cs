@@ -31,10 +31,6 @@ public class CharacterMovement : MonoBehaviour
         {
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         }
-        if(!canMove)
-        {
-            horizontalMove = 0;
-        }
 
         m_PlayerAnimator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
