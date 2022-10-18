@@ -22,10 +22,11 @@ public class MeleeBehaviour: MonoBehaviour
     //Do damager to tag collider
     private void OnTriggerEnter2D(Collider2D col) 
     {
+        Vector3 _p = new Vector3(gameObject.transform.position.x + 0.85f, gameObject.transform.position.y,0);
         if(col.gameObject.tag == targertTag)
         {
            col.gameObject.SendMessage("TakeDamage",m_Damage);
-           Instantiate(hitEffect,col.transform.position,default);
+           Instantiate(hitEffect,_p, gameObject.transform.rotation);
         }
         else
         {

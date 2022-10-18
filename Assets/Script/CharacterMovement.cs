@@ -70,13 +70,7 @@ public class CharacterMovement : MonoBehaviour
     {
         canMove = false;
         canAttack = false;
-    }
-    
-
-    void OnDamage()
-    {
-
-    }
+    }  
 
     public void OnLanding()
     {
@@ -85,6 +79,12 @@ public class CharacterMovement : MonoBehaviour
     public void OnJumping()
     {
         m_PlayerAnimator.SetBool("isJumping", true);
+    }
+
+    public void KnockBack()
+    {
+        Vector2 KnockBackForce = new Vector2(0,600);
+        GetComponent<Rigidbody2D>().AddForce(KnockBackForce);
     }
 }
 
