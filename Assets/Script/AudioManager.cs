@@ -18,20 +18,25 @@ public class AudioManager : MonoBehaviour
           s.source.volume = s.volume;
           s.source.pitch = s.pitch;
           s.source.loop = s.loop;
+          //s.source.playOnAwake = s.playOnAwake;
 
         }
     }
-        
-    private void Start() {
-        Play("Theme");
-    }
+    private void Start() 
+    {
+        Play("Theme");  
+    }       
 
     public void Play (string _name)
     {
-        Sound s = Array.Find(sounds, Sound => Sound.name == name);
-        if (s.name == null)
-            Debug.Log("Sound With name '" + "' Not found");
+        
+        Sound s = Array.Find(sounds, Sound => Sound.name == _name);
+        if (s == null)
+        {
+            Debug.Log("Sound With name: '" + _name + "' Not found");
             return;
+        }
+            
         s.source.Play();
     }
 }
