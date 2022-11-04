@@ -27,6 +27,7 @@ public class MeleeBehaviour: MonoBehaviour
         {
            col.gameObject.SendMessage("TakeDamage",m_Damage);
            Instantiate(hitEffect,_p, gameObject.transform.rotation);
+           SoundsManager.PlaySound(SoundsManager.Sounds.Hit);
         }
         else
         {

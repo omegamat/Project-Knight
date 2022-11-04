@@ -58,6 +58,7 @@ public class CharacterMovement : MonoBehaviour
         //OnAttackEvent.Invoke();
         m_SwordAnimator.SetBool("isAttacking", true);
         m_PlayerAnimator.SetTrigger("isAttacking");
+        SoundsManager.PlaySound(SoundsManager.Sounds.PlayerAttack);
         
     }
     public void OnExitAttack()

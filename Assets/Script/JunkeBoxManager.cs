@@ -4,7 +4,7 @@ using UnityEngine;
 
 //audio manager is for music not fix in a objects
 //for "global music" like theme music
-public class AudioManager : MonoBehaviour
+public class JunkeBoxManager : MonoBehaviour
 {
 
     public Sound[] sounds;

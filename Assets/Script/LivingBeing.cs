@@ -61,6 +61,7 @@ public class LivingBeing: MonoBehaviour
         {
             HP = HP - _damege;
             StartCoroutine(OnDamage());
+            SoundsManager.PlaySound(SoundsManager.Sounds.Hit);
             
         } 
         if (flashTime)
