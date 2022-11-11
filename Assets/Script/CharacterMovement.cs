@@ -14,8 +14,12 @@ public class CharacterMovement : MonoBehaviour
     private bool jump = false;
 
     public bool canAttack = true;
+    private bool isAttacking = false;
+    public bool canDefend = true;
+    private bool isDefending = false;
 
     public bool canMove = true;
+    public bool canJump = true;
 
     public UnityEvent OnAttackEvent;
 
@@ -24,12 +28,14 @@ public class CharacterMovement : MonoBehaviour
         controller = GetComponent<CharacterController2D>();
         //animator = GetComponent<Animator>();
     }
-    // Update is called once per frame
     void Update()
     {
         if(canMove)
         {
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+            if (!isDefending)
+                horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+            if (isDefending)//reduce speed while defending
+                horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed/2;    
         }
 
         m_PlayerAnimator.SetFloat("Speed", Mathf.Abs(horizontalMove));
@@ -39,11 +45,18 @@ public class CharacterMovement : MonoBehaviour
             jump = true;
             m_PlayerAnimator.SetBool("isJumping", true);
         }
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canAttack)
         {
-            //canAttack = false;
-            OnAttack();
+            Attack();
         }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            Defend(true);
+        }
+        if (Input.GetButtonUp("Fire2"))
+        {
+            Defend(false);
+        }       
     }
 
     void FixedUpdate()
@@ -52,10 +65,24 @@ public class CharacterMovement : MonoBehaviour
         jump = false;
     }
 
-    void OnAttack()
+    void Defend(bool _bool)
     {
-        
-        //OnAttackEvent.Invoke();
+        if (_bool == true)
+        {
+            canAttack = false;//can't Attack while defending
+            isDefending = true;
+            m_PlayerAnimator.SetBool("IsDefending", true);
+        }           
+        if (_bool == false)
+        {
+            canAttack = true;
+            isDefending = false;
+             m_PlayerAnimator.SetBool("IsDefending", false);
+        }
+           
+    }
+    void Attack()
+    {       
         m_SwordAnimator.SetBool("isAttacking", true);
         m_PlayerAnimator.SetTrigger("isAttacking");
         SoundsManager.PlaySound(SoundsManager.Sounds.PlayerAttack);
