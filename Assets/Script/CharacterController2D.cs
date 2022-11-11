@@ -14,9 +14,11 @@ public class CharacterController2D : MonoBehaviour
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
+	public bool m_GetGrounded{get{return m_Grounded;}}
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+	public bool m_GetFacingRight{get{ return m_FacingRight;}} //For know witch direction i'm facing
 	private Vector3 m_Velocity = Vector3.zero;
 
 	[Header("Events")]

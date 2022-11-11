@@ -89,6 +89,10 @@ public class LivingBeing: MonoBehaviour
 
         yield return null;
     }
+    public void shakeOnDamage()
+    {
+        gameObject.transform.DOShakeScale(0.25f,0.15f,5);
+    }
     IEnumerator FlashOnDamage()
     {
         while(flashTime)

@@ -83,9 +83,15 @@ public class CharacterMovement : MonoBehaviour
     }
     void Attack()
     {       
-        m_SwordAnimator.SetBool("isAttacking", true);
         m_PlayerAnimator.SetTrigger("isAttacking");
         SoundsManager.PlaySound(SoundsManager.Sounds.PlayerAttack);
+
+        if (controller.m_GetGrounded)
+            m_SwordAnimator.SetBool("isAttacking", true);
+        if (!controller.m_GetGrounded)
+            m_SwordAnimator.SetBool("isJumpAttacking", true);
+
+        
         
     }
     public void OnExitAttack()
@@ -109,10 +115,16 @@ public class CharacterMovement : MonoBehaviour
         m_PlayerAnimator.SetBool("isJumping", true);
     }
 
+    ///Knockback direction
+    ///_dir "up"
+    ///_dir "rigth"
+    ///_dir "left"
     public void KnockBack()
     {
-        Vector2 KnockBackForce = new Vector2(0,600);
-        GetComponent<Rigidbody2D>().AddForce(KnockBackForce);
+        int _KnockBackForce = 600;
+        Vector2 _dir = new Vector2(-0.8f,1f);
+        GetComponent<Rigidbody2D>().AddForce(_dir * _KnockBackForce);
+
     }
 }
 
