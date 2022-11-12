@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - NPCEnemy
+  - PickupItems
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - Enemies
   - Weapons
   - Ground
-  - 
-  - 
-  - 
+  - Items
+  - Props
+  - Weapons
   - 
   - 
   - 

@@ -19,6 +19,7 @@ public class JunkeBoxManager : MonoBehaviour
           s.source.volume = s.volume;
           s.source.pitch = s.pitch;
           s.source.loop = s.loop;
+          s.source.outputAudioMixerGroup = s.audioMixerGroup;
           //s.source.playOnAwake = s.playOnAwake;
 
         }

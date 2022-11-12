@@ -3,36 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseUI; //pause canvas
-
     public GameObject deathUI;
+    public TMP_Text currencyText;
 
   
     public Image HP_bar;
-    public LivingBeing player;
+    //public GameObject player;
+    public LivingBeing m_PlayerLivingBeing;
+    public CharacterMovement m_PlayerCharacterMovement;
     float maxHP = 0;
     float currentHP;
 
     public bool isGameOver = false;
 
-    
+    private void Awake() 
+    {
+        //m_PlayerLivingBeing = GetComponent<LivingBeing>();
+        //m_PlayerCharacterMovement = GetComponent<CharacterMovement>();
+    }
     void Start() 
     {
+        
+
         deathUI.SetActive(false);
-        maxHP = player.maxHP;
+        maxHP = m_PlayerLivingBeing.maxHP;
     }
 
     
     void Update() // Update is called once per frame
     {
-        isGameOver = player.GetIsAlive;
-        currentHP = player.HP; //set healh bar
+        if (m_PlayerLivingBeing.HP <= 0)
+            isGameOver = m_PlayerLivingBeing.GetIsAlive;
+
+        currentHP = m_PlayerLivingBeing.HP; //set healh bar
         HP_bar.fillAmount = currentHP/maxHP; //set healh life bar according with current life
+        currencyText.text = m_PlayerCharacterMovement.gems.ToString();
 
         //game pause input
         if (Input.GetButtonDown("Cancel"))

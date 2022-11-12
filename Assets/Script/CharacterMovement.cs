@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+//this is the main scrips for the player
 public class CharacterMovement : MonoBehaviour
 {
     public CharacterController2D controller;
@@ -17,10 +18,13 @@ public class CharacterMovement : MonoBehaviour
     private bool isAttacking = false;
     public bool canDefend = true;
     private bool isDefending = false;
+    public bool getIsDefending{get{return isDefending;}}
 
     public bool canMove = true;
     public bool canJump = true;
 
+    public int gems = 0; //this game currency
+    
     public UnityEvent OnAttackEvent;
 
     void Start()
@@ -115,16 +119,17 @@ public class CharacterMovement : MonoBehaviour
         m_PlayerAnimator.SetBool("isJumping", true);
     }
 
-    ///Knockback direction
-    ///_dir "up"
-    ///_dir "rigth"
-    ///_dir "left"
+    //move player we hit
     public void KnockBack()
     {
         int _KnockBackForce = 600;
         Vector2 _dir = new Vector2(-0.8f,1f);
         GetComponent<Rigidbody2D>().AddForce(_dir * _KnockBackForce);
-
+    }
+    
+    public void AddGems(int _v)
+    {
+        gems = gems + _v;
     }
 }
 

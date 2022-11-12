@@ -2,17 +2,73 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLivingBeing : MonoBehaviour
+public class PlayerLivingBeing : LivingBeing
 {
-    // Start is called before the first frame update
-    void Start()
+
+    CharacterMovement m_characterMovement;
+    public override void Start()
     {
+        base.Start();
+        m_characterMovement = GetComponent<CharacterMovement>();
+    }
+
+    public override void TakeDamage(int _damege)
+    {
+        if(!m_characterMovement.getIsDefending)
+        {
+            if (canTakeDamage)
+            {
+                HP = HP - _damege;
+                StartCoroutine(OnDamage());
+                SoundsManager.PlaySound(SoundsManager.Sounds.Hit);
+                if (flashTime)
+                {
+                    StartCoroutine(Flash());  
+                }
+                       
+                if(!IsAlive())
+                {
+                    StartCoroutine(PlayerDeath());
+                }
+            } 
+            
+        }
         
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator OnDamage()
     {
-        
+        canTakeDamage = false;
+        flashTime = true;
+
+        OnDamageEvent.Invoke();
+
+        yield return new WaitForSeconds(invicibleTime);
+
+        canTakeDamage = true;
+        flashTime = false;
+
+        yield return null;
+    }
+    IEnumerator Flash()
+    {
+        while(flashTime)
+        {
+            m_SpriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+            m_SpriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(0.1f);
+        }
+       
+    }
+
+    IEnumerator PlayerDeath()
+    {
+
+        //death animation
+        yield return new WaitForSeconds(2.5f);
+        //Death UI
+        yield return null;
+
     }
 }

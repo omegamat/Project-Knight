@@ -13,15 +13,16 @@ public class LivingBeing: MonoBehaviour
 
     public float invicibleTime = 3f;
     public bool isInmortal = false;
-    private bool canTakeDamage = true;
-    private bool flashTime;
+    protected bool canTakeDamage = true;
+    protected bool flashTime;
 
     public UnityEvent OnDamageEvent;
+    public UnityEvent OnDeathEvent;
 
-    private SpriteRenderer m_SpriteRenderer;
-    private bool IsAlive() // se estiver com 0 de HP considera morto
+    protected SpriteRenderer m_SpriteRenderer;
+    protected bool IsAlive() // se estiver com 0 de HP considera morto
     {
-        if(HP < 0 && !isInmortal)
+        if(HP <= 0 && !isInmortal)
         {
             return true;
         }
@@ -40,73 +41,33 @@ public class LivingBeing: MonoBehaviour
         
     }
     
-    void Awake()
-    {
-        if (OnDamageEvent == null)
-			OnDamageEvent = new UnityEvent();
-    }
-    void Start()
+    public virtual void Start()
     {
         m_SpriteRenderer =  gameObject.GetComponent<SpriteRenderer>();
         m_animator = gameObject.GetComponent<Animator>();
         HP = maxHP;
     }
 
-    // Update is called once per frame
-
-
-    public virtual void TakeDamage(int _damege)
+    public virtual void TakeDamage(int _damage)
     {
         if (canTakeDamage)
         {
-            HP = HP - _damege;
-            StartCoroutine(OnDamage());
-            SoundsManager.PlaySound(SoundsManager.Sounds.Hit);
-            
-        } 
-        if (flashTime)
-            StartCoroutine(FlashOnDamage());     
-        if(!IsAlive())
-        {
-            StartCoroutine(PlayerDeath());
+            if (IsAlive())
+            {
+                HP = HP - _damage;
+
+                OnDamageEvent.Invoke();
+                SoundsManager.PlaySound(SoundsManager.Sounds.Hit);
+            }
+            if (!IsAlive())
+            {
+                OnDeathEvent.Invoke();
+            }
+           
         }
-
-
-        //m_animator.SetTrigger("Damage");
     }
 
-    IEnumerator OnDamage()
-    {
-        canTakeDamage = false;
-        flashTime = true;
-
-        OnDamageEvent.Invoke();
-
-        yield return new WaitForSeconds(invicibleTime);
-
-        canTakeDamage = true;
-        flashTime = false;
-
-        yield return null;
-    }
-    public void shakeOnDamage()
-    {
-        gameObject.transform.DOShakeScale(0.25f,0.15f,5);
-    }
-    IEnumerator FlashOnDamage()
-    {
-        while(flashTime)
-        {
-            m_SpriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        m_SpriteRenderer.color = Color.white;
-        yield return new WaitForSeconds(0.1f);
-        }
-        
-
-    }
-
-    IEnumerator PlayerDeath()
+    IEnumerator DeathCourotine()
     {
 
         //death animation
@@ -115,4 +76,10 @@ public class LivingBeing: MonoBehaviour
         yield return null;
 
     }
+
+    public void shake()
+    {
+        gameObject.transform.DOShakeScale(0.25f,0.15f,5);
+    }
+
 }

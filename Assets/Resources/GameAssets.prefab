@@ -44,14 +44,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4036401caea5429478cc0093f3a2009a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixerGroup_Music: {fileID: -1940525816251863769, guid: e98a02cec9fcc364982ff4fa8f83d6e2, type: 2}
+  audioMixerGroup_SoundEffect: {fileID: 8227921428246472816, guid: e98a02cec9fcc364982ff4fa8f83d6e2, type: 2}
   soundAudioClipArray:
-  - sounds: 0
+  - source: {fileID: 0}
+    sounds: 0
     audioClip: {fileID: 8300000, guid: 0e937694d2366ce498d2a42996481fbc, type: 3}
-  - sounds: 1
+    audioMixerGroup: {fileID: 8227921428246472816, guid: e98a02cec9fcc364982ff4fa8f83d6e2, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 1
+  - source: {fileID: 0}
+    sounds: 1
     audioClip: {fileID: 0}
-  - sounds: 2
+    audioMixerGroup: {fileID: 8227921428246472816, guid: e98a02cec9fcc364982ff4fa8f83d6e2, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 1
+  - source: {fileID: 0}
+    sounds: 2
     audioClip: {fileID: 8300000, guid: bbf3edd0b83af494cb7b67c1c9bd0c9f, type: 3}
-  - sounds: 3
+    audioMixerGroup: {fileID: 8227921428246472816, guid: e98a02cec9fcc364982ff4fa8f83d6e2, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 1
+  - source: {fileID: 0}
+    sounds: 3
     audioClip: {fileID: 8300000, guid: f2f470e6c44229d4c9b23e579677729c, type: 3}
-  - sounds: 4
+    audioMixerGroup: {fileID: 8227921428246472816, guid: e98a02cec9fcc364982ff4fa8f83d6e2, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 1
+  - source: {fileID: 0}
+    sounds: 4
     audioClip: {fileID: 8300000, guid: f4dcbe1504b02cb418d514d153e701ba, type: 3}
+    audioMixerGroup: {fileID: 8227921428246472816, guid: e98a02cec9fcc364982ff4fa8f83d6e2, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - source: {fileID: 0}
+    sounds: 5
+    audioClip: {fileID: 8300000, guid: 68fbb9923dfe7f74dbb41915f2926139, type: 3}
+    audioMixerGroup: {fileID: 8227921428246472816, guid: e98a02cec9fcc364982ff4fa8f83d6e2, type: 2}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  gems: {fileID: 1456117209476758899, guid: 8717a674e5a77fb4d89165df5a1cb4b4, type: 3}
+  Smoke_particule: {fileID: 179100164367719502, guid: 6c2fccc2beafcdd489e5cca5078701ac, type: 3}
