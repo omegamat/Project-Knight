@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3382806841952481135}
   - component: {fileID: 4778576624215581445}
   - component: {fileID: 5260077889507330960}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gems
-  m_TagString: Untagged
+  m_TagString: PickupItems
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
