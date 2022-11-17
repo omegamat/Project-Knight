@@ -10,6 +10,7 @@ public class MoneyBeheviour : MonoBehaviour
         if  (col.gameObject.tag == "Player")
         {
             col.gameObject.SendMessage("AddGems", gemsValue);
+            Instantiate(GameAssets.i.gemsParticle,transform.position,transform.rotation);
             SoundsManager.PlaySound(SoundsManager.Sounds.Pickup);
             Destroy(gameObject,0.15f);
         }

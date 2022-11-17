@@ -44,5 +44,6 @@ public class GameAssets : MonoBehaviour
     }
 
     public GameObject gems;
+    public ParticleSystem gemsParticle;
     public ParticleSystem Smoke_particule;
 }

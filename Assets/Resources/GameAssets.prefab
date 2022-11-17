@@ -96,4 +96,5 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
   gems: {fileID: 1456117209476758899, guid: 8717a674e5a77fb4d89165df5a1cb4b4, type: 3}
+  gemsParticle: {fileID: 6337217525487240892, guid: 24bba78a4a8663e4ca2abe921d29739e, type: 3}
   Smoke_particule: {fileID: 179100164367719502, guid: 6c2fccc2beafcdd489e5cca5078701ac, type: 3}
