@@ -11,9 +11,9 @@ public class BreakableProps : LivingBeing
 
         for (int i = 0; i < howMuchGems; i++)
         {
-            Vector2 _dir = new Vector2(Random.Range(-0.5f,0.5f),Random.Range(0.5f,1f));
+            Vector2 _dir = new Vector2(Random.Range(-2f,2f),Random.Range(1f,0.5f));
             GameObject _obj = Instantiate(GameAssets.i.gems, transform.position, transform.rotation);
-            _obj.GetComponent<Rigidbody2D>().AddForce(_dir * 200);
+            _obj.GetComponent<Rigidbody2D>().AddForce(_dir * 400);
         }
         Instantiate(GameAssets.i.Smoke_particule,transform.position,transform.rotation);
         Destroy(gameObject,0.1f);
