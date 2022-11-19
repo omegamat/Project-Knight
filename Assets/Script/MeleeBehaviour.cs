@@ -23,11 +23,14 @@ public class MeleeBehaviour: MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col) 
     {
         Vector3 _p = new Vector3(gameObject.transform.position.x + 0.85f, gameObject.transform.position.y,0);
-        if(col.gameObject.tag == targertTag || col.gameObject.tag == "PickupItems")
+        if(col.gameObject.tag == targertTag)
         {
            col.gameObject.SendMessage("TakeDamage", m_Damage);
+           
            Instantiate(hitEffect,_p, gameObject.transform.rotation);
            SoundsManager.PlaySound(SoundsManager.Sounds.Hit);
+
+           Debug.Log(col.gameObject);
         }
         else
         {

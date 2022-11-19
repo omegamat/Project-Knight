@@ -22,7 +22,7 @@ public class LivingBeing: MonoBehaviour
     protected SpriteRenderer m_SpriteRenderer;
     protected bool IsAlive() // se estiver com 0 de HP considera morto
     {
-        if(HP <= 0 && !isInmortal)
+        if(HP > 0 && !isInmortal)
         {
             return true;
         }
@@ -50,12 +50,12 @@ public class LivingBeing: MonoBehaviour
 
     public virtual void TakeDamage(int _damage)
     {
-        if (canTakeDamage)
+        if (canTakeDamage && !isInmortal)
         {
+            HP = HP - _damage;
             if (IsAlive())
             {
-                HP = HP - _damage;
-
+                
                 OnDamageEvent.Invoke();
                 SoundsManager.PlaySound(SoundsManager.Sounds.Hit);
             }

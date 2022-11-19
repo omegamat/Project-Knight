@@ -14,6 +14,11 @@ public class PlayerLivingBeing : LivingBeing
 
     public override void TakeDamage(int _damege)
     {
+        if (m_characterMovement.getIsDefending)
+        {
+            m_characterMovement.subtracShieldEnergy();
+        }
+
         if(!m_characterMovement.getIsDefending)
         {
             if (canTakeDamage)
@@ -30,7 +35,8 @@ public class PlayerLivingBeing : LivingBeing
                 {
                     StartCoroutine(PlayerDeath());
                 }
-            } 
+            }
+            
             
         }
         

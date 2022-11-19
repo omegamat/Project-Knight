@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
 
   
     public Image HP_bar;
+    public Image Shield_Bar;
     //public GameObject player;
     public LivingBeing m_PlayerLivingBeing;
     public CharacterMovement m_PlayerCharacterMovement;
@@ -31,7 +32,6 @@ public class UIManager : MonoBehaviour
     void Start() 
     {
         
-
         deathUI.SetActive(false);
         maxHP = m_PlayerLivingBeing.maxHP;
     }
@@ -39,13 +39,18 @@ public class UIManager : MonoBehaviour
     
     void Update() // Update is called once per frame
     {
-        if (m_PlayerLivingBeing.HP <= 0)
-            isGameOver = m_PlayerLivingBeing.GetIsAlive;
+        
 
         currentHP = m_PlayerLivingBeing.HP; //set healh bar
+        float shielHP = m_PlayerCharacterMovement.shieldHP;
+        float maxshielHP = m_PlayerCharacterMovement.maxShieldHP;
+
         HP_bar.fillAmount = currentHP/maxHP; //set healh life bar according with current life
+        Shield_Bar.fillAmount = shielHP/maxshielHP;//set shieldbar
         currencyText.text = m_PlayerCharacterMovement.gems.ToString();
 
+        if (m_PlayerLivingBeing.HP <= 0)
+            isGameOver = true;
         //game pause input
         if (Input.GetButtonDown("Cancel"))
         {
@@ -96,7 +101,7 @@ public class UIManager : MonoBehaviour
     {
         if (gameIsPaused)
         {
-            pauseUI.transform.DOMoveX(190f,0.25f,false);
+            pauseUI.SetActive(true);
             yield return new WaitForSeconds(0.25f);
             Time.timeScale = 0;            
             //pauseInterface.SetActive(true);
@@ -106,7 +111,7 @@ public class UIManager : MonoBehaviour
         else
         {
             Time.timeScale = 1;
-            pauseUI.transform.DOMoveX(-200f,0.25f,false);
+            pauseUI.SetActive(false);
             yield return null;
             //pauseInterface.SetActive(false);
         }
