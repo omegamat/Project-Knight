@@ -11,7 +11,7 @@ public class CharacterMovement : MonoBehaviour
     private MeleeBehaviour m_melee;
     public Animator m_SwordAnimator;
     public GameObject shield;
-    public int shieldHP{get;private set;}
+    public int shieldHP = 3;
     public int maxShieldHP = 3;
     private float shieldCoolDown = 3f;
     public float runSpeed = 40f;
@@ -62,15 +62,32 @@ public class CharacterMovement : MonoBehaviour
         }
 
         //defend
-        if (Input.GetButtonDown("Fire2") && shieldHP > 0)
+        if (controller.m_GetGrounded)
         {
-            Defend(true);
+            if (Input.GetButtonDown("Fire2") && shieldHP > 0)
+            {
+                if(shieldHP > 0)
+                {
+                    Defend(true);
+                }               
+                if (shieldHP <= 0)
+                {
+                    Defend(false);
+                }
+            }
+            if (Input.GetButtonUp("Fire2"))
+            {
+                Defend(false);
+                StartCoroutine(ShieldCountDown());
+            }
+            if (shieldHP <= 0)
+            {
+                Defend(false);
+            }
+            
+
         }
-        if (Input.GetButtonUp("Fire2"))
-        {
-            Defend(false);
-            StartCoroutine(ShieldCountDown());
-        }       
+               
     }
 
     void FixedUpdate()
@@ -100,19 +117,19 @@ public class CharacterMovement : MonoBehaviour
     {
         shieldHP = shieldHP - 1;
         Instantiate(GameAssets.i.ShieldHit_particule, this.transform.position,this.transform.rotation);
+        Mathf.Clamp(shieldHP,0,maxShieldHP);
     }
 
     IEnumerator ShieldCountDown()
     { 
-        if(shieldHP < maxShieldHP)
+        while(shieldHP < maxShieldHP +1)
         {
+            Mathf.Clamp(shieldHP,0,maxShieldHP);
             yield return new WaitForSeconds(shieldCoolDown);
             shieldHP += 1;
-            yield return new WaitForSeconds(shieldCoolDown);
-            shieldHP += 1;
-            yield return new WaitForSeconds(shieldCoolDown);
-            shieldHP += 1;   
+            
         }
+        
         
     }
     void Attack()

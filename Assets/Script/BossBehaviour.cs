@@ -33,8 +33,12 @@ public class BossBehaviour : MonoBehaviour
     }
     public void TriggerBoss()
     {
+               
+        if (!wakeUp)
+        {
+            BossUI.SetActive(true);
+        }
         wakeUp = true;
-        BossUI.SetActive(true);
         m_LivingBeing.isInmortal = false;
     }
     void RandomValue()

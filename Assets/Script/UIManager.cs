@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.Audio;
 
 public class UIManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class UIManager : MonoBehaviour
     public GameObject pauseUI; //pause canvas
     public GameObject deathUI;
     public TMP_Text currencyText;
+
+    public AudioMixer audiomixer; 
 
   
     public Image HP_bar;
@@ -116,5 +119,14 @@ public class UIManager : MonoBehaviour
             //pauseInterface.SetActive(false);
         }
         
+    }
+
+    public void SetVolumeMusic(float _volume)
+    {
+        audiomixer.SetFloat("Music",_volume);
+    }
+    public void SetVolumeSoundEffects(float _volume)
+    {
+        audiomixer.SetFloat("SoundEffects",_volume);
     }
 }

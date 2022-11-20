@@ -48,4 +48,5 @@ public class GameAssets : MonoBehaviour
     public ParticleSystem gemsParticle;
     public ParticleSystem Smoke_particule;
     public ParticleSystem ShieldHit_particule;
+    public ParticleSystem Blood_Particule;
 }
