@@ -15,7 +15,7 @@ public class BreakableProps : LivingBeing
             GameObject _obj = Instantiate(GameAssets.i.gems, transform.position, transform.rotation);
             _obj.GetComponent<Rigidbody2D>().AddForce(_dir * 400);
         }
-        Instantiate(GameAssets.i.Smoke_particule,transform.position,transform.rotation);
+        Instantiate(GameAssets.i.smoke_Particule,transform.position,transform.rotation);
         Destroy(gameObject,0.1f);
     }
 }

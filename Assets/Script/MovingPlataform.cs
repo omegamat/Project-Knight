@@ -7,6 +7,8 @@ public class MovingPlataform : MonoBehaviour
 {
     public float duration = 5f;
     public bool isActivate = true;
+
+    public bool canFlip;
     [SerializeField] Transform plataform;
 
 
@@ -27,11 +29,12 @@ public class MovingPlataform : MonoBehaviour
         positionsArray = new Vector3[2] {pointA,pointB};
 
         plataform.position = positionA.position;
+
         if(isActivate == true)
         {
             Sequence moveSequence = DOTween.Sequence();
-            moveSequence.Append(plataform.DOMove(positionB.position,duration/2f))
-                        .Append(plataform.DOMove(positionA.position,duration/2f))
+            moveSequence.Append(plataform.DOMove(positionB.position,duration/2f).SetEase(Ease.Linear))
+                        .Append(plataform.DOMove(positionA.position,duration/2f).SetEase(Ease.Linear))
                         .SetLoops(-1,LoopType.Restart);
 
         }

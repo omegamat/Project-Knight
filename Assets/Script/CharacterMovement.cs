@@ -116,7 +116,7 @@ public class CharacterMovement : MonoBehaviour
     public void subtracShieldEnergy()
     {
         shieldHP = shieldHP - 1;
-        Instantiate(GameAssets.i.ShieldHit_particule, this.transform.position,this.transform.rotation);
+        Instantiate(GameAssets.i.shieldHit_Particule, this.transform.position,this.transform.rotation);
         Mathf.Clamp(shieldHP,0,maxShieldHP);
     }
 

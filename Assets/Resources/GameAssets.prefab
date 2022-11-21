@@ -98,6 +98,7 @@ MonoBehaviour:
   gems: {fileID: 1456117209476758899, guid: 8717a674e5a77fb4d89165df5a1cb4b4, type: 3}
   projectile: {fileID: 4037297910262126050, guid: af9a5887f0a6bf546962864df819b6fc, type: 3}
   gemsParticle: {fileID: 6337217525487240892, guid: 24bba78a4a8663e4ca2abe921d29739e, type: 3}
-  Smoke_particule: {fileID: 179100164367719502, guid: 6c2fccc2beafcdd489e5cca5078701ac, type: 3}
-  ShieldHit_particule: {fileID: 1209609936226186714, guid: ec650c9327519d148a62782e9b4ca2ce, type: 3}
-  Blood_Particule: {fileID: 1209609936226186714, guid: 7f2f24d6db9dc644ba90387a70438dc6, type: 3}
+  smoke_Particule: {fileID: 179100164367719502, guid: 6c2fccc2beafcdd489e5cca5078701ac, type: 3}
+  shieldHit_Particule: {fileID: 1209609936226186714, guid: ec650c9327519d148a62782e9b4ca2ce, type: 3}
+  blood_Particule: {fileID: 1209609936226186714, guid: 7f2f24d6db9dc644ba90387a70438dc6, type: 3}
+  projectile_Particule: {fileID: 4936453418382748196, guid: 8af813352611b4746ab1688862e7e1f6, type: 3}

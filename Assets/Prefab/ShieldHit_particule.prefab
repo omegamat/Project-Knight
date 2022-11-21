@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5213379951096370928}
   - component: {fileID: 1209609936226186714}
   - component: {fileID: 5373481428422146612}
+  - component: {fileID: 3569524670156954503}
   m_Layer: 0
   m_Name: ShieldHit_particule
   m_TagString: Untagged
@@ -4870,3 +4871,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &3569524670156954503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856477056958055108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c8304016331d447914eb759c2cb083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 1.5

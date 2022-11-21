@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ProjectileBehaviour : MonoBehaviour
 {
+    private void Awake() 
+    {
+        //Instantiate(GameAssets.i.projectile_Particule,transform.position,transform.rotation);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +25,7 @@ public class ProjectileBehaviour : MonoBehaviour
 
            Debug.Log(col.gameObject);
         }
+        Instantiate(GameAssets.i.projectile_Particule,transform.position,transform.rotation);
         Destroy(this.gameObject);
     }
 }

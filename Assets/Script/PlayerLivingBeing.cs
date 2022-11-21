@@ -10,6 +10,8 @@ public class PlayerLivingBeing : LivingBeing
     public CinemachineVirtualCamera m_VirtualCamera;
     private CinemachineBasicMultiChannelPerlin m_VirtualCameraNoise;
 
+    bool canTakeDamageOnShield = true;
+
     CharacterMovement m_characterMovement;
     public override void Start()
     {
@@ -24,7 +26,11 @@ public class PlayerLivingBeing : LivingBeing
     {
         if (m_characterMovement.getIsDefending)
         {
-            m_characterMovement.subtracShieldEnergy();
+            if(canTakeDamageOnShield)
+            {
+                StartCoroutine(OnShieldDamage());
+            }
+            
         }
 
         if(!m_characterMovement.getIsDefending)
@@ -55,7 +61,7 @@ public class PlayerLivingBeing : LivingBeing
     {
         canTakeDamage = false;
         flashTime = true;
-        Instantiate(GameAssets.i.Blood_Particule,transform.position,transform.rotation);
+        Instantiate(GameAssets.i.blood_Particule,transform.position,transform.rotation);
         //Camera.main.transform.DOShakePosition(0.5f,5);
         StartCoroutine(ShakeCamera(5f,0.25f));
 
@@ -67,6 +73,13 @@ public class PlayerLivingBeing : LivingBeing
         flashTime = false;
 
         yield return null;
+    }
+    IEnumerator OnShieldDamage()
+    {   
+        canTakeDamageOnShield = false;
+        m_characterMovement.subtracShieldEnergy();
+        yield return new WaitForSeconds(0.5f);
+        canTakeDamageOnShield = true;
     }
     IEnumerator Flash()
     {
