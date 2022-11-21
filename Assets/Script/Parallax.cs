@@ -29,5 +29,6 @@ public class Parallax : MonoBehaviour
         
         m_parallaxBackground[0].position = startPosition + travel * parallaxFactor * 1;
         m_parallaxBackground[1].position = startPosition + travel * parallaxFactor * 0.5f;
+        m_parallaxBackground[2].position = startPosition + travel * parallaxFactor * 0.1f;
     }
 }

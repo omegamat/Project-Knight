@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class MeleeBehaviour: MonoBehaviour
 {
+    public CinemachineVirtualCamera m_VirtualCamera;
+    private CinemachineBasicMultiChannelPerlin m_VirtualCameraNoise;
+
     Animator m_animetor;
 
     public CharacterMovement m_character;
@@ -17,6 +21,9 @@ public class MeleeBehaviour: MonoBehaviour
     void Start()
     {
         m_animetor = GetComponent<Animator>();
+
+        if (m_VirtualCamera != null)
+            m_VirtualCameraNoise = m_VirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
     //Do damager to tag collider
@@ -29,6 +36,8 @@ public class MeleeBehaviour: MonoBehaviour
            
            Instantiate(hitEffect,_p, gameObject.transform.rotation);
            SoundsManager.PlaySound(SoundsManager.Sounds.Hit);
+
+           StartCoroutine(ShakeCamera(3,0.2f));
 
            Debug.Log(col.gameObject);
         }
@@ -47,5 +56,12 @@ public class MeleeBehaviour: MonoBehaviour
     {
         m_character.OnExitAttack();
         m_animetor.SetBool("isAttacking", false);
+    }
+
+    private IEnumerator ShakeCamera(float shakeIntensity = 5f, float shakeTiming = 0.5f)
+    {
+        m_VirtualCameraNoise.m_AmplitudeGain = shakeIntensity;               
+        yield return new WaitForSeconds(shakeTiming);
+        m_VirtualCameraNoise.m_AmplitudeGain = 0;
     }
 }

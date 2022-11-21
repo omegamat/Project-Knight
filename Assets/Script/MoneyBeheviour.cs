@@ -12,7 +12,7 @@ public class MoneyBeheviour : MonoBehaviour
             col.gameObject.SendMessage("AddGems", gemsValue);
             Instantiate(GameAssets.i.gemsParticle,transform.position,transform.rotation);
             SoundsManager.PlaySound(SoundsManager.Sounds.Pickup);
-            Destroy(gameObject,0.15f);
+            Destroy(gameObject,0.01f);
         }
     }
 }

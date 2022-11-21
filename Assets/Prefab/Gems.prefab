@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3382806841952481135}
   - component: {fileID: 4778576624215581445}
   - component: {fileID: 5260077889507330960}
+  - component: {fileID: 7741222783478847978}
   m_Layer: 9
   m_Name: Gems
   m_TagString: PickupItems
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1456117209476758899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -122,9 +123,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.24685906}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.20685281
+  m_Radius: 0.4
 --- !u!61 &4778576624215581445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,7 +150,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.793817, y: 2.7910144}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!114 &5260077889507330960
 MonoBehaviour:
@@ -164,3 +165,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemsValue: 1
+--- !u!95 &7741222783478847978
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456117209476758899}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c20923440fac42418f5bdb4fec58bd1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

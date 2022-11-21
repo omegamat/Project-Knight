@@ -122,7 +122,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  howMuchGems: 3
+  howMuchGems: 1
 --- !u!61 &5240463713508131690
 BoxCollider2D:
   m_ObjectHideFlags: 0

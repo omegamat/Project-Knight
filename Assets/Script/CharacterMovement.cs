@@ -122,11 +122,12 @@ public class CharacterMovement : MonoBehaviour
 
     IEnumerator ShieldCountDown()
     { 
-        while(shieldHP < maxShieldHP +1)
+        while(shieldHP < maxShieldHP )
         {
-            Mathf.Clamp(shieldHP,0,maxShieldHP);
+            
             yield return new WaitForSeconds(shieldCoolDown);
             shieldHP += 1;
+            Mathf.Clamp(shieldHP,0,maxShieldHP);
             
         }
         

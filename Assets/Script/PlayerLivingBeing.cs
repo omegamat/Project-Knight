@@ -93,11 +93,11 @@ public class PlayerLivingBeing : LivingBeing
        
     }
     private IEnumerator ShakeCamera(float shakeIntensity = 5f, float shakeTiming = 0.5f)
-        {
-                m_VirtualCameraNoise.m_AmplitudeGain = shakeIntensity;               
-                yield return new WaitForSeconds(shakeTiming);
-                m_VirtualCameraNoise.m_AmplitudeGain = 0;
-        }
+    {
+        m_VirtualCameraNoise.m_AmplitudeGain = shakeIntensity;               
+        yield return new WaitForSeconds(shakeTiming);
+        m_VirtualCameraNoise.m_AmplitudeGain = 0;
+    }
 
 
     IEnumerator PlayerDeath()

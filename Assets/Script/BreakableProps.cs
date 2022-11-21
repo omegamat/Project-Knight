@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BreakableProps : LivingBeing
 {
-    public int howMuchGems = 4; 
+    public int howMuchGems = 2; 
 
     public void DropCurrence()//Forusing on Death event
     {
